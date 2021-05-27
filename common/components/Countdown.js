@@ -6,7 +6,8 @@ import styles from "./Countdown.module.scss";
 const CountdownDisplay = ({ time: { day, hour, minute, second } }) => {
   return (
     <div className={styles.CountdownDisplay}>
-      <h2>Quarters BBQ</h2>
+      <h1>Quarters BBQ</h1>
+
       <div className={styles.countdown_time}>
         <div>
           <p>{day}</p> days

@@ -12,9 +12,9 @@
   align-items: center;
   flex-direction: column;
 
-  h2 {
+  h1 {
     color: white;
-    margin: 0;
+    margin-bottom: 20px;
     padding: 10px;
     border: 2px solid whitesmoke;
   }
@@ -31,7 +31,7 @@
 
   div {
     padding: 20px;
-    font-size: 40px;
+    font-size: 32px;
   }
 
   p {
@@ -65,5 +65,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
   }
 }
