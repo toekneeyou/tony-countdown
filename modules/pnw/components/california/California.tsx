@@ -26,6 +26,7 @@ export default function California() {
           links={["https://santacruzlife.com/shark-fin-cove/"]}
           images={[
             "https://cdn.shopify.com/s/files/1/0053/6513/7472/products/sharkfinsuset.jpg?v=1547093211",
+            "http://www.outdoorphotographer.com/images/gallery/full/531/2782531.jpg",
           ]}
           descriptions={["Free parking.", "Apparently there is also a sea cave??"]}
         />

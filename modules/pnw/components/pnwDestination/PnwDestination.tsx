@@ -6,14 +6,14 @@ interface PnwDestinationProps {
   name: string;
   links: string[];
   images: string[];
-  descriptions: string[];
+  descriptions?: string[];
 }
 
 export default function PnwDestination({
   name,
   links,
   images,
-  descriptions,
+  descriptions = ["description here"],
 }: PnwDestinationProps) {
   return (
     <div className={styles.pnw_destination}>

@@ -17,6 +17,16 @@ export default function Oregon() {
           descriptions={["Temporarily Closed 10/5/2021"]}
         />
       </li>
+
+      <li>
+        <PnwDestination
+          name="Samuel H Boardman Corridor"
+          links={["https://localadventurer.com/samuel-h-boardman-state-scenic-corridor/"]}
+          images={[
+            "https://localadventurer.com/wp-content/uploads/2020/02/honeymoon-spots-in-usa.jpg",
+          ]}
+        />
+      </li>
     </ul>
   );
 }

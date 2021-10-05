@@ -9,7 +9,6 @@ import styles from "./PmwNav.module.scss";
 export default function PnwNav({ isMinimizeNav }) {
   const { pnwNavValues } = useContext(PnwContext);
   const { selectedOption, setSelectedOption } = pnwNavValues;
-  const navRef = useRef(null);
 
   return (
     <nav
