@@ -1,0 +1,29 @@
+.pnw_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+
+  .pnw_nav_option_list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    column-gap: 20px;
+
+    .pnv_nav_option {
+      cursor: pointer;
+      padding-bottom: 5px;
+      color: #222;
+
+      &:hover {
+        color: #86905a;
+      }
+
+      &.selected_pnw_nav_option {
+        color: #86905a;
+        font-weight: bold;
+        border-bottom: 2px solid #8d7f5f;
+      }
+    }
+  }
+}

@@ -62,10 +62,10 @@ const Countdown = () => {
       {difference >= 0 ? (
         <CountdownDisplay time={timeRemaining} />
       ) : (
-        <div className={styles["countdown-over"]}>The wait is over!</div>
+        <div className={styles["countdown-over"]} style={{color: 'white'}}>The wait is over!</div>
       )}
       <div className={styles["countdown-image"]}></div>
-    </div>
+    </div> 
   );
 };
 
