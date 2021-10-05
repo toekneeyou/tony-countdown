@@ -14,12 +14,13 @@ export const PnwContext = createContext({} as PnwContextValues);
 
 export default function PnwBlog() {
   const pnwNavValues = usePnwNav();
+  const { selectedOption } = pnwNavValues;
   const blogRef = useRef(null);
   const blogMainRef = useRef(null);
   const [isMinimizeNav, setIsMinimizeNav] = useState(false);
 
   useEffect(() => {
-    const blogEl = blogRef.current;
+    const blogEl: HTMLDivElement = blogRef.current;
     const blogMain: HTMLDivElement = blogMainRef.current;
 
     const handleScroll = (e) => {
@@ -29,7 +30,16 @@ export default function PnwBlog() {
     };
 
     blogEl.addEventListener("scroll", handleScroll);
+
+    return () => {
+      blogEl.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+
+  useEffect(() => {
+    const blogEl: HTMLDivElement = blogRef.current;
+    blogEl.scrollTo(0, 0);
+  }, [selectedOption]);
 
   return (
     <PnwContext.Provider value={{ pnwNavValues }}>
