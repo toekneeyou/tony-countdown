@@ -24,7 +24,7 @@ export default function PnwBlog() {
 
     const handleScroll = (e) => {
       setIsMinimizeNav(() => {
-        return blogMain.getBoundingClientRect().top < 25;
+        return blogMain.getBoundingClientRect().top < 40;
       });
     };
 
