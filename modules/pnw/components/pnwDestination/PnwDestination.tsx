@@ -35,7 +35,7 @@ export default function PnwDestination({
         <ul className={styles.pnw_destination_link_list}>
           {links.map((link) => {
             return (
-              <li key={link} className={styles.pnw_destination_link} key={link}>
+              <li className={styles.pnw_destination_link} key={link}>
                 <a href={link}>{link}</a>
               </li>
             );
