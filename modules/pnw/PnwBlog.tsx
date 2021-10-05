@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React, { createContext, useEffect, useRef, useState } from "react";
 
 import PnwNav from "./components/pnwNav/PnwNav";
 import PnwMain from "./components/pnwMain/PnwMain";
@@ -14,17 +14,31 @@ export const PnwContext = createContext({} as PnwContextValues);
 
 export default function PnwBlog() {
   const pnwNavValues = usePnwNav();
+  const blogRef = useRef(null);
+  const blogMainRef = useRef(null);
+  const [isMinimizeNav, setIsMinimizeNav] = useState(false);
+
+  useEffect(() => {
+    const blogEl = blogRef.current;
+    const blogMain: HTMLDivElement = blogMainRef.current;
+
+    const handleScroll = (e) => {
+      setIsMinimizeNav(() => {
+        return blogMain.getBoundingClientRect().top < 25;
+      });
+    };
+
+    blogEl.addEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <PnwContext.Provider value={{ pnwNavValues }}>
-      <div className={styles.pnw_blog}>
-        <header>
-          <h1>PNW 2021</h1>
-        </header>
+      <div className={styles.pnw_blog} ref={blogRef}>
+        <PnwNav isMinimizeNav={isMinimizeNav} />
 
-        <PnwNav />
-
-        <PnwMain />
+        <div ref={blogMainRef}>
+          <PnwMain />
+        </div>
       </div>
     </PnwContext.Provider>
   );

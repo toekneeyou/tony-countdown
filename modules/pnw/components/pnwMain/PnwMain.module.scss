@@ -1,9 +1,6 @@
 .pnw_main {
   display: grid;
   grid-template-columns: 1fr minmax(0, 800px) 1fr;
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: 100%;
   padding: 1rem;
 
   > * {

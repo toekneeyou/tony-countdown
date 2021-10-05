@@ -1,8 +1,17 @@
 .pnw_destination {
   display: grid;
   grid-template-columns: 1fr;
+  position: relative;
+  > * {
+    z-index: 1;
+  }
 
   .pnw_destination_name {
+    background: #aab08963;
+    color: #4b5341;
+    padding: 1rem;
+    margin: 0;
+    border-radius: 4px;
   }
 
   .pnw_destionation_description_list {
@@ -10,11 +19,13 @@
     grid-template-columns: 1fr;
     grid-template-rows: max-content;
     row-gap: 1rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
 
     li {
       p {
+        color: #222;
         margin: 0;
+        line-height: 24px;
       }
     }
   }

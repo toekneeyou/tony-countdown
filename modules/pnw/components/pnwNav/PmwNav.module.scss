@@ -2,7 +2,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 25px;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  padding: 50px;
+  transition: 0.25s;
+  z-index: 100;
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    transition: 0.25s;
+    filter: grayscale(0.5);
+
+    h1 {
+      margin: 0;
+    }
+
+    &.left_header {
+      opacity: 0;
+      position: absolute;
+      left: 0;
+    }
+  }
 
   .pnw_nav_option_list {
     display: grid;
@@ -24,6 +48,24 @@
         font-weight: bold;
         border-bottom: 2px solid #8d7f5f;
       }
+    }
+  }
+
+  &.minimize_pnw_nav {
+    padding: 25px 25px 20px 25px;
+    border-bottom: 1px solid #eee;
+    background: white;
+
+    .center_header {
+      opacity: 0;
+      height: 0;
+      margin: 0;
+    }
+
+    .left_header {
+      opacity: 1;
+      left: 25px;
+      margin: 0;
     }
   }
 }
